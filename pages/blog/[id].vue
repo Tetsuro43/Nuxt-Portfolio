@@ -9,6 +9,7 @@
         <p>{{ data.date }}</p>
         <ContentDoc />
       </div>
+      <PrevNext :prev="prev" :next="next" />
     </div>
   </div>
 </template>
@@ -20,4 +21,10 @@ const { data } = await useAsyncData(useRoute().path, () => {
   // sortのidの番号は、-1にすると逆順になる
   return queryContent(useRoute().path).findOne();
 });
+
+// https://content.nuxtjs.org/api/composables/query-content#findsurroundpath-options
+const [prev, next] = await queryContent("/blog")
+                          .sort({ id: 1 })
+                          .findSurround(useRoute().path);
+// console.log(prev, next);
 </script>

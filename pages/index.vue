@@ -1,23 +1,23 @@
 <template>
   <div>
-    <div>
+    <div class="hero">
       <nuxt-img src="/images/index-hero.jpg" alt="hero" format="webp"/>
-      <div>
+      <div class="textContainer">
         <h1>I'm Tetsuro Shingu!</h1>
         <h3>JavaScript Developer</h3>
       </div>
     </div>
-    <div>
-      <div>
+    <div class="container">
+      <div class="profile">
         <div>
           <h2>JavaScrip Nerd</h2>
           <p>「ではみなさんは、そういうふうに川だと言われたり、乳の流れたあとだと言われたりしていた、このぼんやりと白いものがほんとうは何かご承知ですか」先生は、黒板につるした大きな黒い星座の図の、上から下へ白くけぶった銀河帯のようなところを指しながら、みんなに問いをかけました。カムパネルラが手をあげました。それから四、五人手をあげました。ジョバンニも手をあげようとして、急いでそのままやめました。たしかにあれが</p>
         </div>
         <nuxt-img src="/images/profile.jpeg" alt="profile" format="webp"/>
       </div>
-      <div>
+      <div class="skills">
         <h2>Skills</h2>
-        <div>
+        <div class="skillsContainer">
           <div>
             <img src="/images/javascript.svg" alt="javascript">
             <span>JavaScript/2years</span>
@@ -36,8 +36,8 @@
           </div>
         </div>
       </div>
-      <div>
-        <NuxtLink to="/contact">MakeItHappen!</NuxtLink>
+      <div class="ctaButton">
+        <NuxtLink to="/contact">Make It Happen!</NuxtLink>
       </div>
     </div>
   </div>

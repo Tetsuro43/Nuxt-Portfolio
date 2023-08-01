@@ -1,12 +1,14 @@
 <template>
   <div>
-    <div>
+    <div class="hero">
       <nuxt-img :src="data.image" alt="blog-image" format="webp" />
     </div>
-    <div>
-      <h1>{{ data.title }}</h1>
-      <p>{{ data.date }}</p>
-      <ContentDoc />
+    <div class="wrapper">
+      <div class="container">
+        <h1>{{ data.title }}</h1>
+        <p>{{ data.date }}</p>
+        <ContentDoc />
+      </div>
     </div>
   </div>
 </template>
@@ -18,6 +20,4 @@ const { data } = await useAsyncData(useRoute().path, () => {
   // sortのidの番号は、-1にすると逆順になる
   return queryContent(useRoute().path).findOne();
 });
-
-console.log(data.image);
 </script>

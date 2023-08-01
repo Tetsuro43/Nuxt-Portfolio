@@ -1,7 +1,7 @@
 <template>
   <header>
-    <div>
-      <div>
+    <div class="container">
+      <div class="flexContainer">
         <NuxtLink to="/">
           <nuxt-img src="/images/logo.png" alt="logo" format="webp" />
         </NuxtLink>

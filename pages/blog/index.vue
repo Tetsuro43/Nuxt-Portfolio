@@ -1,17 +1,19 @@
 <template>
-  <div>
-    <h1>Blog</h1>
-    <p>エンジニアの日常生活をお届けします</p>
-    <div v-for="singleData in data" :key="singleData.id">
-      <div>
-        <h3>{{ singleData.title }}</h3>
-        <p>{{ singleData.excerpt }}</p>
-        <p>{{ singleData.date }}</p>
-        <!-- <p>{{ singleData._path }}</p> -->
-        <NuxtLink :to="singleData._path">Read More</NuxtLink>
-      </div>
-      <div>
-        <nuxt-img :src="singleData.image" alt="blog-image" format="webp" />
+  <div class="wrapper">
+    <div class="container">
+      <h1>Blog</h1>
+      <p>エンジニアの日常生活をお届けします</p>
+      <div v-for="singleData in data" :key="singleData.id" class="blogCard">
+        <div class="textsContainer">
+          <h3>{{ singleData.title }}</h3>
+          <p>{{ singleData.excerpt }}</p>
+          <p>{{ singleData.date }}</p>
+          <!-- <p>{{ singleData._path }}</p> -->
+          <NuxtLink :to="singleData._path" class="linkButton">Read More</NuxtLink>
+        </div>
+        <div class="blogImg">
+          <nuxt-img :src="singleData.image" alt="blog-image" format="webp" />
+        </div>
       </div>
     </div>
   </div>

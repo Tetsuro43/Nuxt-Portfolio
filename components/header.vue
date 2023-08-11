@@ -7,6 +7,7 @@
         </NuxtLink>
         <ul>
           <li><NuxtLink to="/blog">Blog</NuxtLink></li>
+          <li><NuxtLink to="/three">ThreeJS</NuxtLink></li>
           <li><NuxtLink to="/contact">Contact</NuxtLink></li>
         </ul>
       </div>

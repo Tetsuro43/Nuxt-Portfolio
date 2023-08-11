@@ -15,6 +15,12 @@
         </div>
         <nuxt-img src="/images/profile.jpeg" alt="profile" format="webp"/>
       </div>
+      <div class="three">
+        <h2>ThreeJS</h2>
+        <div class="threeContainer">
+          <NuxtLink to="/three">ThreeJS Page</NuxtLink>
+        </div>
+      </div>
       <div class="skills">
         <h2>Skills</h2>
         <div class="skillsContainer">
@@ -42,3 +48,9 @@
     </div>
   </div>
 </template>
+
+<script setup>
+const { $firebaseDB } = useNuxtApp();
+console.log($firebaseDB._options);
+
+</script>
